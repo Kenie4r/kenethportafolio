@@ -1,0 +1,107 @@
+:root{
+    --main-color :  #F2A675; 
+    --secondary: #DEC8EC; 
+    --purple : #AAA6CB; 
+    --bg-color: #E4EDF2; 
+    --lightBlue: #B6CAD6;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none  ;
+    color: inherit;
+}
+body{
+    background-color: var(--bg-color);
+}
+header{
+    width: 70%;
+
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.profile-photo{
+    background-color: var(--bg-color);
+    padding: 1em;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    top: 40px;
+}
+.profile-photo img{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.nombres{
+    width: 80%;
+    background-color: white;
+    padding: 3em;
+    border-radius: 10px;
+    box-shadow: 3px 3px  rgba(0, 0, 0, 0.301);
+}
+.nombres h1{
+    text-align: center;
+
+}
+.parragraph{
+    text-align: justify;
+    font-size: 15px;
+    padding: .2em;
+}
+
+.nombres h3{
+    text-align: center;
+    margin-top: 1%;
+}
+.social-1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} 
+.social-1 div{
+    text-align: center;
+    font-size: large;
+    padding: 1em;
+}
+.icons{
+
+    font-size: 1.7em;
+}
+.icon-facebook{
+    color: rgb(32, 32, 156);
+    padding: 0.2em;
+
+}
+.icon-instagram{
+    color: rgb(166, 93, 179);
+}
+.icon-github{
+    color: rgb(54, 6, 54);
+}
+@media (max-width: 700px) {
+    .profile-photo{
+        padding: 1em;
+        width: 200px;
+        height: 200px;
+        transition:  height 1s;
+        transition: width 1s;
+    }
+    .social-1{
+        flex-direction: column;
+    }
+}
