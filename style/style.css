@@ -1,107 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 :root{
-    --main-color :  #F2A675; 
-    --secondary: #DEC8EC; 
-    --purple : #AAA6CB; 
-    --bg-color: #E4EDF2; 
-    --lightBlue: #B6CAD6;
-
+    --main: #143516;
+    --white: #FFFEFB;
+    --secondary: #2E8A47;
+    --third: #0F3931;
+    --dark: #010602;
 }
+
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    box-sizing: border-box;
 }
 a{
-    text-decoration: none  ;
     color: inherit;
+    text-decoration: none;
 }
 body{
-    background-color: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-header{
-    width: 70%;
-
-    margin: auto;
+header {
+    background-color: var(--dark);
+    color: white;
+    font-family: 'Comfortaa', cursive;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+header div{
+    display: flex;
     align-items: center;
-    position: relative;
+    padding: 1.12em;
+}
+.icon-profile{
+    font-size: 1.8em;
+}
+#menu >ul{
+    display: flex;
+    list-style: none;
+}
+#menu>ul>li{
+    margin: 0 1.2em;
 }
 
+.about{
+    position: relative;
+    height: 80vh;
+    background-color: var(--third);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.flex-row{
+    display: flex;
+    align-items: center;
+}
+.Titulo{
+    font-size: 2em;
+    color: white;
+}
+.me>h1{
+    padding: 1.2em ;
+    text-align: center;
+    font-size: 1.5rem;
+}
 .profile-photo{
-    background-color: var(--bg-color);
-    padding: 1em;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     overflow: hidden;
-    position: relative;
-    top: 40px;
+    border: #143516 solid 2px;
 }
 .profile-photo img{
     width: 100%;
     height: 100%;
-    background-color: white;
-    border-radius: 50%;
-    object-fit: cover;
+    object-fit: contain;
 }
-.nombres{
-    width: 80%;
-    background-color: white;
-    padding: 3em;
-    border-radius: 10px;
-    box-shadow: 3px 3px  rgba(0, 0, 0, 0.301);
-}
-.nombres h1{
-    text-align: center;
-
-}
-.parragraph{
-    text-align: justify;
-    font-size: 15px;
-    padding: .2em;
-}
-
-.nombres h3{
-    text-align: center;
-    margin-top: 1%;
-}
-.social-1{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+#me-info{
     align-items: center;
-} 
-.social-1 div{
-    text-align: center;
-    font-size: large;
-    padding: 1em;
+    justify-content: center;
 }
-.icons{
-
-    font-size: 1.7em;
+.my-info{
+    text-align: justify;
+    margin: 1em 2em;
+    width: 60%;
+    font-size: 1.2em;
 }
-.icon-facebook{
-    color: rgb(32, 32, 156);
-    padding: 0.2em;
-
+.grid-col{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
 }
-.icon-instagram{
-    color: rgb(166, 93, 179);
+.skill{
+    width: 100%;
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
 }
-.icon-github{
-    color: rgb(54, 6, 54);
+.skill p{
+    font: 14px;
 }
-@media (max-width: 700px) {
-    .profile-photo{
-        padding: 1em;
-        width: 200px;
-        height: 200px;
-        transition:  height 1s;
-        transition: width 1s;
-    }
-    .social-1{
+.skill span{
+    font-size: 95px;
+}
+.skill:hover  span{
+    transform: scale(100px);
+    transition: transform 1ms;
+}
+/*Responsive*/
+@media (max-width: 789px){
+    .flex-row{
         flex-direction: column;
     }
+    .Titulo{
+        font-size: 1.4em;
+    }
+}
+
+
+
+/*DISEÑO SVG PARA EL FINAL DEL DIV*/
+.custom-shape-divider-bottom-1633444838 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1633444838 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 81px;
+}
+
+.custom-shape-divider-bottom-1633444838 .shape-fill {
+    fill: #FFFFFF;
+}
+.custom-shape-divider-top-1633474602 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1633474602 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 46px;
+}
+
+.custom-shape-divider-top-1633474602 .shape-fill {
+    fill: #FFFFFF;
 }
