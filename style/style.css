@@ -120,6 +120,14 @@ header div{
     .Titulo{
         font-size: 1.4em;
     }
+    .grid-col{
+        grid-template-columns: repeat(2,1fr);
+    }
+    header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 
